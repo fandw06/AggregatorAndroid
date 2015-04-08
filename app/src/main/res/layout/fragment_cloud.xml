@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/l1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="View History Data"
+        android:id="@+id/textView2" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="3dp"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ECG"
+            android:id="@+id/hist_check_ecg" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer"
+            android:id="@+id/hist_check_acc" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ozone"
+            android:id="@+id/hist_check_ozone" />
+
+    </LinearLayout>
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/historyPlot" 
+        android:background="#ffffffff" 
+        android:layout_width="fill_parent" 
+        android:layout_height="200dip" 
+        android:layout_marginLeft="3.0dip" 
+        android:layout_marginTop="30.0dip" 
+        android:layout_marginRight="3.0dip" 
+        android:layout_marginBottom="50.0dip" 
+        android:layout_weight="1.0" 
+        
+        androidplot.title="History Plot Demo" 
+        androidplot.domainLabel="Time"
+        androidplot.rangeLabel="Data"
+        androidPlot.titleWidget.labelPaint.textSize="10dp"
+        androidPlot.domainLabelWidget.labelPaint.textSize="10dp"
+        androidPlot.rangeLabelWidget.labelPaint.textSize="10dp"
+        androidPlot.graphWidget.marginTop="8dp"
+        androidPlot.graphWidget.marginLeft="5dp"
+        androidPlot.graphWidget.marginBottom="8dp"
+        androidPlot.graphWidget.marginRight="5dp"
+        androidPlot.graphWidget.rangeLabelPaint.textSize="8dp"
+        androidPlot.graphWidget.rangeOriginLabelPaint.textSize="8dp"
+        androidPlot.graphWidget.domainLabelPaint.textSize="8dp"
+        androidPlot.graphWidget.domainOriginLabelPaint.textSize="8dp"
+        androidPlot.legendWidget.textPaint.textSize="8dp"
+        androidPlot.legendWidget.iconSizeMetrics.heightMetric.value="10dp"
+        androidPlot.legendWidget.iconSizeMetrics.widthMetric.value="10dp"
+        androidPlot.legendWidget.heightMetric.value="15dp"
+        androidPlot.legendWidget.positionMetrics.anchor="right_bottom"/>
+
+</LinearLayout>

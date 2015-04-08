@@ -1,0 +1,8 @@
+<resources>
+    <string name="hello">Hello, IOIO User!</string>
+    <string name="app_name">Aggregator</string>
+    <string name="title_section1">Control</string>
+    <string name="title_section2">Plot</string>
+    <string name="title_section3">Cloud</string>
+
+</resources>

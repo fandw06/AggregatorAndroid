@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/listView">
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/plot_ecg"
+        android:background="#ffffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginTop="3.0dip"
+        android:layout_marginRight="3.0dip"
+        android:layout_weight="1.0"
+
+        androidplot.title="ECG"
+        androidplot.domainLabel="Time"
+        androidplot.rangeLabel="ECG"
+        androidPlot.titleWidget.labelPaint.textSize="10dp"
+        androidPlot.domainLabelWidget.labelPaint.textSize="10dp"
+        androidPlot.rangeLabelWidget.labelPaint.textSize="10dp"
+        androidPlot.graphWidget.marginTop="8dp"
+        androidPlot.graphWidget.marginLeft="5dp"
+        androidPlot.graphWidget.marginBottom="8dp"
+        androidPlot.graphWidget.marginRight="5dp"
+        androidPlot.graphWidget.rangeLabelPaint.textSize="8dp"
+        androidPlot.graphWidget.rangeOriginLabelPaint.textSize="8dp"
+        androidPlot.graphWidget.domainLabelPaint.textSize="8dp"
+        androidPlot.graphWidget.domainOriginLabelPaint.textSize="8dp"
+        androidPlot.legendWidget.textPaint.textSize="8dp"
+        androidPlot.legendWidget.iconSizeMetrics.heightMetric.value="10dp"
+        androidPlot.legendWidget.iconSizeMetrics.widthMetric.value="10dp"
+        androidPlot.legendWidget.heightMetric.value="15dp"
+        androidPlot.legendWidget.positionMetrics.anchor="right_bottom"/>
+</LinearLayout>

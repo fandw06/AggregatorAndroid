@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="inertia.aggregator" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.usb.host" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_assist"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+
+        <uses-library android:name="com.android.future.usb.accessory"
+            android:required="false" />
+
+        <service android:name="inertia.aggregator.AggregatorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+        </service>
+
+        <activity android:label="@string/app_name"
+            android:name="inertia.aggregator.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>
